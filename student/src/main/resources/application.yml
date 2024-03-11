@@ -9,8 +9,16 @@ server:
   error:
     include_message: always
 spring:
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+#      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+        format_sql: true
   application:
-    name: students
+    name: students_ms
   config:
     import: optional:configserver:http://localhost:8888
   datasource:
@@ -18,11 +26,3 @@ spring:
     url: jdbc:mysql://localhost:3306/mic_ser_student?createDatabaseIfNotExist=true
     username: root
     password: Temp1234%
-    jpa:
-      hibernate:
-        ddl-auto: create-drop
-#        ddl-auto: update
-      properties:
-        hibernate:
-          dialect: org.hibernate.dialect.MySQL8Dialect
-          format_sql: true
