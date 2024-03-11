@@ -20,4 +20,8 @@ public class StudentService {
     public List<StudentEntity> getAllStudents() {
         return repository.findAll();
     }
+
+    public List<StudentEntity> getStudentsBySchoolId(long schoolId) {
+        return repository.findAllBySchoolId(schoolId);
+    }
 }
