@@ -1,6 +1,5 @@
 package vch.example.school;
 
-import lombok.Data;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import vch.example.school.client.StudentClient;

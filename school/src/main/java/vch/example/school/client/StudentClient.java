@@ -7,7 +7,7 @@ import vch.example.school.Student;
 
 import java.util.List;
 
-@FeignClient(name = "student-service", url = "${application.config.students_url}")
+@FeignClient(name = "student-service", url = "${my_config.students-url}")
 public interface StudentClient {
     @GetMapping("/school/{school-id}")
     List<Student> findAllStudentsBySchool(@PathVariable("school-id") long schoolId);

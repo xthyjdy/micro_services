@@ -1,0 +1,15 @@
+server:
+  port: 8888
+  error:
+    include_message: always
+
+spring:
+  profiles:
+    active: native
+  application:
+    name: config_server_ms
+  cloud:
+    config:
+      server:
+        native:
+          search-locations: classpath:/my_configurations
