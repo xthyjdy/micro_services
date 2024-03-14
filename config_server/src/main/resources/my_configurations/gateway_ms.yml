@@ -29,3 +29,8 @@ spring:
 
 m_c2:
   p3: test_5
+
+management:
+  tracing:
+    sampling:
+      probability: 1.0
